@@ -1,0 +1,26 @@
+.spinner {
+  display: block;
+  font-size: 140px;
+}
+.spinner:after {
+  display: inline-block;
+  content: '◌';
+  height: 187px;
+}
+
+#chart {
+  border: 1px solid black;
+}
+
+.loading:after {
+  animation: rotate 10s linear infinite;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes rotate {
+	0% { transform: rotate(0deg) }
+	100% {transform: rotate(360deg) }
+}
