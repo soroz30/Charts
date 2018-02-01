@@ -20973,29 +20973,25 @@ var App = function (_Component) {
           switch (_context.prev = _context.next) {
             case 0:
               _this.setState({ loading: true });
-              console.log('a');
-              _context.next = 4;
+              _context.next = 3;
               return fetch('/stocks');
 
-            case 4:
+            case 3:
               fetchResult = _context.sent;
-
-              console.log(fetchResult);
-              console.log('b');
-              _context.next = 9;
+              _context.next = 6;
               return fetchResult.json();
 
-            case 9:
+            case 6:
               body = _context.sent;
-              _context.next = 12;
+              _context.next = 9;
               return body.stockSymbols;
 
-            case 12:
+            case 9:
               stocks = _context.sent;
-              _context.next = 15;
+              _context.next = 12;
               return _this.setStateAsync({ loading: false, stocks: stocks });
 
-            case 15:
+            case 12:
             case 'end':
               return _context.stop();
           }
@@ -21182,6 +21178,7 @@ var Chart = function (_React$Component) {
       for (var i = 0; i < 6; i++) {
         color += chars[Math.floor(Math.random() * 16)];
       }
+      console.log(color);
       return color;
     }, _this.drawStocks = function () {
       var stockNumber = 0;
